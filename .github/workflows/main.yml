@@ -1,0 +1,23 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main  # Change to your default branch if needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy to FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server: ftpupload.net                  # Your FTP server address
+        username: if0_36059550                 # Your FTP username
+        password: TahirAhmadWani       # Your FTP password stored in GitHub secrets
+        server-dir: /suwatulislamkup.infy.uk/htdocs/ # The correct remote directory on your FTP server
+        protocol: ftp                           # Use 'ftp' or 'ftps' based on your server configuration
