@@ -126,7 +126,7 @@
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
-                <button type="submit" class="btn" onclick="exploreFeatures()">Login</button>
+                <button type="submit" class="btn">Login</button>
                 <p class="signup-link">Don't have an account? <a href="#">Sign Up</a></p>
             </form>
         </div>
@@ -140,7 +140,7 @@
             const password = document.getElementById('password').value;
 
             if (email && password) {
-                alert(`Welcome, ${email}!`);
+                exploreFeatures();
             } else {
                 alert('Please fill in all fields.');
             }
