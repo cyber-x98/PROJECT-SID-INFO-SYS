@@ -77,6 +77,60 @@
           #client-name{
             font-size: 3em;
           }
+
+
+
+
+
+
+
+
+
+
+
+          .dialog-box{
+            position: absolute;
+            height: fit-content;
+            width: 90%;
+            height: 90%;
+            margin-right: 0;
+          }
+          .dialog-box-title-bar{
+            display: flex;
+            width: 100%;
+            background-color: rgb(27, 17, 21);
+            padding: 10px;
+          }
+          #dialog-box-cross-btn{
+            position: absolute;
+            right: 10px;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 15px;
+            height: 22px;
+          }
+          #dialog-box-cross-btn:hover {
+            background-color: red;
+          }
+          #dialog-box-title{
+            font-size: 15px;
+          }
           
+
+          #payment-receive-options-container{
+           flex-wrap: nowrap;
+           justify-content: center;
+           overflow: unset;
+           width: 100%;
+           margin-top: 0px;
+          }
+          #payment-receive-option-button-group{
+            width: 100%;
+          }
+          #receive-payment-options-donation-space{
+            height: 87%;
+            overflow: auto;
+          }
+
   }
   
