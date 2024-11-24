@@ -74,6 +74,9 @@
           .tab-space{
             padding-left: 0vw;
           }
+          #client-name{
+            font-size: 3em;
+          }
           
   }
   
