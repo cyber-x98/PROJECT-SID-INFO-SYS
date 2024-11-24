@@ -145,6 +145,8 @@
 <script>
   //================= Tab Custom Event Listeners ===========================
     // toggTabVisibilityOnClick is a function defined in handlers : Turns on the corresponding tab space where content is displayed
+    let toggle = toggleVisibility('tab-button-1', 'tab-space-1') //this function cannot be called directly because we have implemented closures so this returns a reference to the callack which is stored into a variable and then called
+    toggle() //this is the reference of toggleVisisbility function
     toggTabVisibilityOnClick('tab-button-1', 'tab-space-1')  // means clicking on tab-button-1 will make tab-space-1 visible
     toggTabVisibilityOnClick('tab-button-2', 'tab-space-2')
     toggTabVisibilityOnClick('tab-button-3', 'tab-space-3')
