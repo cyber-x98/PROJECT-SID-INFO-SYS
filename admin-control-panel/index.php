@@ -3,6 +3,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  body{
+  }
   * {
     box-sizing: border-box;
   }
@@ -29,10 +31,6 @@
     box-shadow: 0 0 8px rgba(255, 255, 255, 1.0);
     border-radius: 8px;
   }
-  #header{
-    
-  }
-  
   .menu ul {
     list-style-type: none;
     margin: 0;
