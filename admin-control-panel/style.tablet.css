@@ -18,4 +18,25 @@
   #client-name{
     font-size: 2em;
   }
+  #payment-receive-options-container {
+    width: 100%;
+    overflow: unset;
+    margin-top: 5px;
+  }
+  #payment-receive-option-button-group{
+    
+    width: 100%;
+  }
+  .form-container {
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+  }
+  #receive-payment-options-donation-space{
+    height: max-content;
+  }
+
+
+
   }
