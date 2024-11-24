@@ -19,15 +19,14 @@
   
   html {
     font-family: "Lucida Sans", sans-serif;
-    background: linear-gradient(135deg, #a0a1bd, #040406);
+    /* background: linear-gradient(135deg, #a0a1bd, #040406); */
   }
   
   .header {
-    /* background-color: #9933cc; */
+    background-color: #9933cc;
     color: #ffffff;
     padding: 15px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 1.0);
-    background-color: rgba(255, 0, 0, 0.6);
     border-radius: 8px;
   }
   #header{
