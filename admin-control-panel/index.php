@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body{
+    /* background: linear-gradient(135deg, #a0a1bd, #040406); */
   }
   * {
     box-sizing: border-box;
@@ -21,62 +22,9 @@
   
   html {
     font-family: "Lucida Sans", sans-serif;
-    /* background: linear-gradient(135deg, #a0a1bd, #040406); */
   }
   
-  .header {
-    background-color: #9933cc;
-    color: #ffffff;
-    padding: 15px;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 1.0);
-    border-radius: 8px;
-  }
-  .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
   
-  .menu li {
-    margin-bottom: 7px;
-    background-color: #33b5e5;
-    color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
-  
-  .menu li:hover {
-    background-color: #0099cc;
-  }
-  
-  .aside {
-    background-color: #33b5e5;
-    padding: 15px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 14px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  }
-  
-  .footer {
-    background-color: #0099cc;
-    color: #ffffff;
-    text-align: center;
-    font-size: 12px;
-    padding: 15px;
-  }
-  .tab-space{
-      display: none;
-      padding-left: 2vw;
-  }
-  .tab{
-    cursor: pointer;
-    padding: 8px;
-    height: 100%;
-    width: 100%;
-  }
-  .tab:hover{
-    background-color: #0099cc;
-  }
   
 </style>
 <link rel="stylesheet"  href="style.mobile.css">
@@ -85,9 +33,11 @@
 </head>
 <body>
 
-<div class="header" id="header">
-  <h1>Admin Control Panel</h1>
-  <p>Accounting and management system</p>
+<div class="header">
+  <div id="header-title-and-logout-container">
+    <h1>Admin Control Panel</h1>
+    <button id="logout-btn">Logout</button>
+  </div>
 </div>
 
 <div class="row">
