@@ -19,12 +19,19 @@
   
   html {
     font-family: "Lucida Sans", sans-serif;
+    background: linear-gradient(135deg, #a0a1bd, #040406);
   }
   
   .header {
-    background-color: #9933cc;
+    /* background-color: #9933cc; */
     color: #ffffff;
     padding: 15px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 1.0);
+    background-color: rgba(255, 0, 0, 0.6);
+    border-radius: 8px;
+  }
+  #header{
+    
   }
   
   .menu ul {
@@ -62,6 +69,7 @@
   }
   .tab-space{
       display: none;
+      padding-left: 10vw;
   }
   .tab{
     cursor: pointer;
@@ -80,7 +88,7 @@
 </head>
 <body>
 
-<div class="header">
+<div class="header" id="header">
   <h1>Admin Control Panel</h1>
   <p>Accounting and management system</p>
 </div>
@@ -126,12 +134,15 @@
     <div class="tab-space" id="tab-space-7"><h1>Accounts</h1></div>
   </div>
 
+  
   <div class="col-3 col-s-12">
     <div class="aside">
-      <h2>Note!</h2>
-      <p>This project is under development and will be released very soon!</p>
-      <h2>This Project Belongs to "Auqaaf Committee Suwat-Ul-Islam Darzipora, Kupwara."</h2>
-      <p></p>
+      <marquee direction="up">
+        <h2>Note!</h2>
+        <p>This project is under development and will be released very soon!</p>
+        <h2>This Project Belongs to "Auqaaf Committee Suwat-Ul-Islam Darzipora, Kupwara."</h2>
+        <p></p>
+      </marquee>
     </div>
   </div>
 </div>

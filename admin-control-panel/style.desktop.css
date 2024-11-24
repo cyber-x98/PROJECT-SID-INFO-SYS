@@ -71,6 +71,9 @@
           .payment-feature-card button:hover {
               background-color: #45a049;
           }
+          .tab-space{
+            padding-left: 0vw;
+          }
           
   }
   
