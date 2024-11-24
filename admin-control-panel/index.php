@@ -9,16 +9,7 @@
   * {
     box-sizing: border-box;
   }
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
   
-  [class*="col-"] {
-    float: left;
-    padding: 15px;
-  }
   
   html {
     font-family: "Lucida Sans", sans-serif;
@@ -35,7 +26,11 @@
 
 <div class="header">
   <div id="header-title-and-logout-container">
-    <h1>Admin Control Panel</h1>
+    <div>
+    <div id="client-name">Suwat-Ul-Islam Darzipora</div>
+    <div >Accounting and management System</div>
+  </div>
+    
     <button id="logout-btn">Logout</button>
   </div>
 </div>
