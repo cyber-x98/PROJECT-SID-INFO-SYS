@@ -68,7 +68,7 @@
   }
   .tab-space{
       display: none;
-      padding-left: 10vw;
+      padding-left: 2vw;
   }
   .tab{
     cursor: pointer;
