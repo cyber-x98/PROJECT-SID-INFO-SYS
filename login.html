@@ -140,12 +140,12 @@
             const password = document.getElementById('password').value;
 
             if (email && password) {
-                exploreFeatures();
+                jumpToAdminControlPanel();
             } else {
                 alert('Please fill in all fields.');
             }
         });
-        function exploreFeatures() {
+        function jumpToAdminControlPanel() {
              // You can also redirect to the features page if needed
              window.location.href = "admin-control-panel/index.php";
         }

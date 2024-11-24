@@ -1,3 +1,6 @@
 body{
     background: linear-gradient(135deg, #a0a1bd, #040406);
 }
+html {
+    font-family: "Lucida Sans", sans-serif;
+  }
