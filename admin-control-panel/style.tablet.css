@@ -15,4 +15,7 @@
     .tab-space{
       padding-left: 0vw;
   }
+  #client-name{
+    font-size: 2em;
+  }
   }
