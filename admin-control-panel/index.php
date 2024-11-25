@@ -40,9 +40,9 @@
                             <button class="payment-receive-option-button" id="payment-receive-juma-fund-button">Jum'a Fund</button>
                         </div>
                     </div>
-                    <div id="receive-payment-options-donation-space" class="receive-payment-tab-space">
-                        <div class="donation-form-container">
-                            <form id="donation-form" onsubmit="generateInvoice(event)">
+                    <div id="receive-payment-options-donation-space" class="receive-payment-tab-space" style="display: flex;">
+                        <div class="rec-pay-form-container">
+                            <form id="rec-pay-form" onsubmit="#">
                                 <div class="form-group">
                                     <label for="receipt-no">Name</label>
                                     <input type="text" id="name" name="name" required>
@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="amount">Amount</label>
-                                    <input type="number" id="amount" name="amount" required>
+                                    <input type="number" id="amount" name="amount" placeholder="₹" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="payment-mode">Mode of Payment</label>
@@ -80,13 +80,13 @@
                                     <input type="text" id="statement-number" name="statement_number">
                                 </div>
                                 <div id="donation-form-submit-button-container">
-                                    <button type="submit" class="donation-form-submit-button">Submit</button>
+                                    <button type="submit" class="rec-pay-form-submit-button">Submit</button>
                                 </div>
                             </form>
                         </div>
                     </div><!-- donation form end !-->
                     <div id="receive-payment-options-safe-fund-space" class="receive-payment-tab-space">
-                        <div id="receive-safe-fund-form-container">
+                        <div class="rec-pay-form-container">
                             <div id="receive-safe-fund-form">
                                 <div class="form-group">
                                     <label for="date">Date</label>
@@ -94,10 +94,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="amount">Amount</label>
-                                    <input type="number" id="amount" name="amount" required>
+                                    <input type="number" id="amount" name="amount" placeholder="₹" required>
                                 </div>
                                 <div id="safe-fund-form-submit-button-container">
-                                    <button type="submit" class="donation-form-submit-button">Submit</button>
+                                    <button type="submit" class="rec-pay-form-submit-button">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -125,7 +125,7 @@
                                 <div>
                         </li>
                         <li id="tab-button-2">
-                            <div class="tab">🛒 Shops</div>
+                            <div class="tab">🏭 Assets</div>
                         </li>
                         <li id="tab-button-3">
                             <div class="tab">🧑 Shop Tenants</div>
@@ -182,12 +182,10 @@
 
                     <div class="col-3 col-s-12">
                         <div class="aside">
-                            <marquee direction="up">
                                 <h2>Note!</h2>
                                 <p>This project is under development and will be released very soon!</p>
                                 <h2>This Project Belongs to "Auqaaf Committee Suwat-Ul-Islam Darzipora, Kupwara."</h2>
                                 <p></p>
-                            </marquee>
                         </div>
                     </div>
                     </div>

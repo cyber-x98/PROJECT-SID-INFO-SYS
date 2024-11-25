@@ -48,12 +48,12 @@ function addCustomEventListener(element ,event, callBack){ // this is custom eve
     document.getElementById(element).addEventListener(event, callBack(element)) 
 }
 //================================= Add custom classes ===========================================
-function addCustomClassList(element, classList){
-    document.getElementById(element).classList.add(classList)
+function addCustomClassList(element, className){
+    document.getElementById(element).classList.add(className)
 }
-function removeCustomEventHandler(element, classList){
+function removeCustomClassList(element, className){
     try{
-        document.getElementById(element).classList.remove(classList)
+        document.getElementById(element).classList.remove(className)
     }
     catch(error){
         console.log("Error: an element is empty!")

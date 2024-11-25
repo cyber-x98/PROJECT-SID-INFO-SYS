@@ -13,11 +13,11 @@ toggTabVisibilityOnClick('tab-button-5', 'tab-space-5')
 toggTabVisibilityOnClick('tab-button-6', 'tab-space-6')
 toggTabVisibilityOnClick('tab-button-7', 'tab-space-7')
 //==============================Buttons from dialog box========================================= 
-let previousclickedPaymentReceiveOption
-let previousChoosenPaymentReceiveSpace
+let previousclickedPaymentReceiveOption = 'payment-receive-donation-button'
+let previousChoosenPaymentReceiveSpace = 'receive-payment-options-donation-space'
 addCustomEventListener('payment-receive-donation-button', 'click', (element) => {
 return (element) => {
-  removeCustomEventHandler(previousclickedPaymentReceiveOption, 'payment-receive-option-button-active')
+  removeCustomClassList(previousclickedPaymentReceiveOption, 'payment-receive-option-button-active')
   makeInVisible([previousChoosenPaymentReceiveSpace])
   makeVisible(['receive-payment-options-donation-space'], 'flex')
   previousChoosenPaymentReceiveSpace = 'receive-payment-options-donation-space'
@@ -28,7 +28,7 @@ return (element) => {
 
 addCustomEventListener('payment-receive-safe-fund-button', 'click', (element) => {
   return (element) => {
-    removeCustomEventHandler(previousclickedPaymentReceiveOption, 'payment-receive-option-button-active')
+    removeCustomClassList(previousclickedPaymentReceiveOption, 'payment-receive-option-button-active')
     makeInVisible([previousChoosenPaymentReceiveSpace])
     makeVisible(['receive-payment-options-safe-fund-space'], 'flex')
     previousChoosenPaymentReceiveSpace = 'receive-payment-options-safe-fund-space'
@@ -42,3 +42,5 @@ addCustomEventListener('payment-receive-safe-fund-button', 'click', (element) =>
 addCustomEventListener('dialog-box-cross-btn', 'click', () => { return () => {makeInVisible(['receive-payments-dialog-box','dialog-boxes-container']);showMainContent()}})
 addCustomEventListener('receive-payment-button', 'click', () => { return () => {makeVisible(['receive-payments-dialog-box'],'block');makeVisible(['dialog-boxes-container'],'flex');hideMainContent()}})
 //============================================================================
+// keep payments 1st tab clicked
+addCustomClassList('payment-receive-donation-button', 'payment-receive-option-button-active')

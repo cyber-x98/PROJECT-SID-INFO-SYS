@@ -203,7 +203,7 @@
 }
 #payment-receive-option-button-group{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 200%;
 }
 
@@ -211,10 +211,11 @@
   width: 200px;
   cursor: pointer;
   font-size: 20px;
-  margin-left: 2px;
   background-color: #dcd9d9;
   text-align: center;
-  border: none;
+  border: 1px solid black;
+  border-bottom: none;
+  border-top: none;
 }
 
 .payment-receive-option-button-active {
@@ -222,8 +223,8 @@
   color: #fff;
   border: 1px solid red;
   border-bottom: none;
+  border-top: none;
   margin-top: -1px;
-  transform: translateY(-2px);
 }
 
 .receive-payment-tab-space{
@@ -235,60 +236,7 @@
 }
 
 
-
-
-/* .form-container {
-  padding: 30px;
-  width: 100%;
-  max-width: 500px;
-  height: 110;
-}
-#donation-form{
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 1em;
-  color: #fff;
-}
-
-.form-group input,
-.form-group select {
-  width: 100%;
-  padding: 12px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.donation-form-submit-button {
-  width: 100%;
-  padding: 12px;
-  font-size: 1.2em;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-bottom: 20px;
-}
-
-.submit-button:hover {
-  background-color: #45a049;
-} */
-
-
-.donation-form-container{
+.rec-pay-form-container{
   margin-top: 10px;
   width: 100%;
   padding: 10px;
@@ -304,6 +252,7 @@
   color: #fff;
 }
 
+
 .form-group input,
 .form-group select {
   width: 100%;
@@ -317,12 +266,12 @@
   opacity: 0.2;
   color: white;
 }
-.form-group option{
+.form-group option, select{
   background-color: rgb(82, 79, 79);
   color: white;
 }
 
-.donation-form-submit-button {
+.rec-pay-form-submit-button {
   margin-top: 10px;
   width: 100%;
   padding: 12px;
@@ -334,4 +283,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.rec-pay-form-submit-button:hover {
+  background-color: #45a049;
+} 
   
