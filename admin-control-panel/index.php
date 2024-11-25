@@ -36,9 +36,11 @@
                             <button class="payment-receive-option-button" id="payment-receive-siyam-fund-button">Siyam Fund</button>
                             <button class="payment-receive-option-button" id="payment-receive-bathroom-fees-button">Bathroom Fees</button>
                             <button class="payment-receive-option-button" id="payment-receive-hama-fund-button">Hamam Fund</button>
+                            <button class="payment-receive-option-button" id="payment-receive-sales-button">Sales</button>
+                            <button class="payment-receive-option-button" id="payment-receive-juma-fund-button">Jum'a Fund</button>
                         </div>
                     </div>
-                    <div id="receive-payment-options-donation-space">
+                    <div id="receive-payment-options-donation-space" class="receive-payment-tab-space">
                         <div class="donation-form-container">
                             <form id="donation-form" onsubmit="generateInvoice(event)">
                                 <div class="form-group">
@@ -83,8 +85,22 @@
                             </form>
                         </div>
                     </div><!-- donation form end !-->
-                    <div id="receive-payment-options-safe-fund-space">
-                        Safe Fund
+                    <div id="receive-payment-options-safe-fund-space" class="receive-payment-tab-space">
+                        <div id="receive-safe-fund-form-container">
+                            <div id="receive-safe-fund-form">
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" id="amount" name="amount" required>
+                                </div>
+                                <div id="safe-fund-form-submit-button-container">
+                                    <button type="submit" class="donation-form-submit-button">Submit</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

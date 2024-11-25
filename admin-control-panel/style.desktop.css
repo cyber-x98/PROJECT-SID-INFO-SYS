@@ -98,7 +98,7 @@
           .dialog-box-title-bar{
             display: flex;
             width: 100%;
-            background-color: rgb(27, 17, 21);
+            background-color: rgb(162, 24, 72);
             padding: 10px;
             border-bottom: none;
           }
@@ -128,7 +128,7 @@
           #payment-receive-option-button-group{
             width: 100%;
           }
-          #receive-payment-options-donation-space{
+          .receive-payment-tab-space{
             height: 87%;
             overflow: auto;
           }

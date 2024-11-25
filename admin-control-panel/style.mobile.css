@@ -177,7 +177,7 @@
   display: flex;
   width: 100%;
   padding: 5px;
-  background-color: rgb(15, 1, 6);
+  background-color: rgb(162, 24, 72);
   color: #fff;
 }
 #dialog-box-title, #dialog-box-cross-btn{
@@ -226,13 +226,14 @@
   transform: translateY(-2px);
 }
 
-#receive-payment-options-donation-space{
+.receive-payment-tab-space{
   display: none;
   justify-content: center;
   height: 100%;
   width: 100%;
   overflow: auto;
 }
+
 
 
 
@@ -312,6 +313,14 @@
   border-radius: 5px;
   background-color: transparent;
 }
+.form-group input:is(:-webkit-autofill, :autofill) {
+  opacity: 0.2;
+  color: white;
+}
+.form-group option{
+  background-color: rgb(82, 79, 79);
+  color: white;
+}
 
 .donation-form-submit-button {
   margin-top: 10px;
@@ -324,18 +333,5 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
   
-  input:-webkit-autofill {
-    background-color: lightblue; /* Your preferred color */
-    color: black;              /* Text color */
-    border: 1px solid;            /* Match with your theme */
-    transition: background-color 0.5s ease-in-out; /* Smooth effect */
-}
-
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
-    background-color: lightgreen;
-}
-
-
-}
