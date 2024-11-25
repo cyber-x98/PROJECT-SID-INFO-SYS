@@ -27,15 +27,13 @@
     
     width: 100%;
   }
-  .form-container {
-    padding: 30px;
-    width: 100%;
-    max-width: 500px;
-    height: 400px;
-  }
+
   #receive-payment-options-donation-space{
     height: max-content;
   }
+
+
+  
 
 
 

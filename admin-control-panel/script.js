@@ -12,17 +12,33 @@ toggTabVisibilityOnClick('tab-button-4', 'tab-space-4')
 toggTabVisibilityOnClick('tab-button-5', 'tab-space-5')
 toggTabVisibilityOnClick('tab-button-6', 'tab-space-6')
 toggTabVisibilityOnClick('tab-button-7', 'tab-space-7')
-//======================================================================= 
-let previousClickedPaymentReceiveDonationButton = 'receive-payment-options-donation-space'
+//==============================Buttons from dialog box========================================= 
+let previousclickedPaymentReceiveOption
+let previousChoosenPaymentReceiveSpace
 addCustomEventListener('payment-receive-donation-button', 'click', (element) => {
 return (element) => {
-  makeInVisible([previousClickedPaymentReceiveDonationButton]);
-  makeVisible(['receive-payment-options-donation-space'], 'flex');
-  previousClickedPaymentReceiveDonationButton = element
+  removeCustomEventHandler(previousclickedPaymentReceiveOption, 'payment-receive-option-button-active')
+  makeInVisible([previousChoosenPaymentReceiveSpace])
+  makeVisible(['receive-payment-options-donation-space'], 'flex')
+  previousChoosenPaymentReceiveSpace = 'receive-payment-options-donation-space'
+  previousclickedPaymentReceiveOption = 'payment-receive-donation-button'
+  addCustomClassList('payment-receive-donation-button', 'payment-receive-option-button-active')
 }
 }) // this is custom eventlistener function that takes three arguments "element", "event", and "function to be called" as callback
+
+addCustomEventListener('payment-receive-safe-fund-button', 'click', (element) => {
+  return (element) => {
+    removeCustomEventHandler(previousclickedPaymentReceiveOption, 'payment-receive-option-button-active')
+    makeInVisible([previousChoosenPaymentReceiveSpace])
+    makeVisible(['receive-payment-options-safe-fund-space'], 'flex')
+    previousChoosenPaymentReceiveSpace = 'receive-payment-options-safe-fund-space'
+    previousclickedPaymentReceiveOption = 'payment-receive-safe-fund-button'
+    addCustomClassList('payment-receive-safe-fund-button', 'payment-receive-option-button-active')
+  }
+  })
 // ==========================================================================
 //hide receive paymement dialog box when clicked on cross
 // prototype "addCustomEventListener(String elementName, String eventType, callback)"
-addCustomEventListener('dialog-box-cross-btn', 'click', () => { return () => {makeInVisible(['receive-payments-dialog-box','dialog-boxes-container'])}})
-addCustomEventListener('receive-payment-button', 'click', () => { return () => {makeVisible(['receive-payments-dialog-box'],'block');makeVisible(['dialog-boxes-container'],'flex')}})
+addCustomEventListener('dialog-box-cross-btn', 'click', () => { return () => {makeInVisible(['receive-payments-dialog-box','dialog-boxes-container']);showMainContent()}})
+addCustomEventListener('receive-payment-button', 'click', () => { return () => {makeVisible(['receive-payments-dialog-box'],'block');makeVisible(['dialog-boxes-container'],'flex');hideMainContent()}})
+//============================================================================

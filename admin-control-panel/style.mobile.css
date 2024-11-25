@@ -156,21 +156,20 @@
   position: absolute;
   display: none;
   justify-content: center;
-  align-items: center;
   height: 98vh;
   width: 98vw;
-  z-index: 1;
+  z-index: 1;  
 }
 
 .dialog-box {
   display: none;
   position: absolute;
   height: fit-content;
+  min-height: 100%;
   width: 98%;
-  height: 100%;
+  height: fit-content;
   background-color: #201d1df2;
   margin-right: 10px;
-  overflow: hidden;
 }
 
 .dialog-box-title-bar {
@@ -218,7 +217,7 @@
   border: none;
 }
 
-.payment-receive-option-button:hover {
+.payment-receive-option-button-active {
   background-color: #201d1d;
   color: #fff;
   border: 1px solid red;
@@ -237,11 +236,17 @@
 
 
 
-.form-container {
+/* .form-container {
   padding: 30px;
   width: 100%;
   max-width: 500px;
-  height: auto;
+  height: 110;
+}
+#donation-form{
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .form-group {
@@ -264,7 +269,7 @@
   border-radius: 5px;
 }
 
-.submit-button {
+.donation-form-submit-button {
   width: 100%;
   padding: 12px;
   font-size: 1.2em;
@@ -279,8 +284,58 @@
 
 .submit-button:hover {
   background-color: #45a049;
+} */
+
+
+.donation-form-container{
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  max-height: 100%;
+}
+.form-group{
+  margin-top: 10px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1em;
+  color: #fff;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.donation-form-submit-button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2em;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  input:-webkit-autofill {
+    background-color: lightblue; /* Your preferred color */
+    color: black;              /* Text color */
+    border: 1px solid;            /* Match with your theme */
+    transition: background-color 0.5s ease-in-out; /* Smooth effect */
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    background-color: lightgreen;
 }
 
 
-
-
+}

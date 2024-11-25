@@ -133,5 +133,50 @@
             overflow: auto;
           }
 
+
+          .donation-form-container{
+            margin-top: 30px;
+            width: 50%;
+            padding: 10px;
+            max-height: 100%;
+          }
+          .form-group{
+            display: flex;
+            margin-top: 10px;
+          }
+          .form-group label {
+            margin-bottom: 0;
+            font-size: 1em;
+            color: #fff;
+            width: 250px;
+          }
+          
+          .form-group input,
+          .form-group select {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: transparent;
+            color: white;
+          }
+          
+          .donation-form-submit-button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 12px;
+            font-size: 1.2em;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          
+          }
+
+
+
   }
   

@@ -13,7 +13,7 @@ function toggleVisibility(srcElement,destElement){
             changeBackgroundColor(previousClickedTabButton, '#33b5e5')
         }
         catch(error){
-            console.log('This error was handled by Tahir Ahmad Wani: ', error)
+            console.log('Error: an element is empty!')
         }
         changeBackgroundColor(srcElement, '#0099cc')
         makeVisible([destElement], 'block')
@@ -28,9 +28,15 @@ function makeVisible(elementList, displayType){
     
 }
 function makeInVisible(elementList){ // an array of arguments must be passed
-    for(i = 0; i < elementList.length; i++){
-        document.getElementById(elementList[i]).style.display = 'none' 
+    try{
+        for(i = 0; i < elementList.length; i++){
+            document.getElementById(elementList[i]).style.display = 'none' 
+        }
     }
+    catch(error) {
+        console.log("Error: Kindly pass the elements in an array!")
+    }
+    
 }
 //=================================== Function to change color =====================================
 
@@ -41,5 +47,27 @@ function changeBackgroundColor(element, color){
 function addCustomEventListener(element ,event, callBack){ // this is custom eventlistener function that takes three arguments "element", "event", and "function to be called" as callback
     document.getElementById(element).addEventListener(event, callBack(element)) 
 }
-
+//================================= Add custom classes ===========================================
+function addCustomClassList(element, classList){
+    document.getElementById(element).classList.add(classList)
+}
+function removeCustomEventHandler(element, classList){
+    try{
+        document.getElementById(element).classList.remove(classList)
+    }
+    catch(error){
+        console.log("Error: an element is empty!")
+    }
+}
+//======================= function to hide main content ========================
+function hideMainContent(){
+    mainContent = document.getElementById('main-content')
+    mainContent.style.display = 'none'
+    document.body.style.backgroundColor = '#333'
+}
+function showMainContent(){
+    mainContent = document.getElementById('main-content')
+    mainContent.style.display = 'block'
+    document.body.style.backgroundColor = 'white'
+}
 
