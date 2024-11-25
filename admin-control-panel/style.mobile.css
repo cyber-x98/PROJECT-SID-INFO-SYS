@@ -246,6 +246,7 @@
   margin-top: 10px;
 }
 .form-group label {
+  padding-top: 10px;
   display: block;
   margin-bottom: 5px;
   font-size: 1em;
@@ -262,11 +263,18 @@
   border-radius: 5px;
   background-color: transparent;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
 .form-group input:is(:-webkit-autofill, :autofill) {
   opacity: 0.2;
   color: white;
 }
-.form-group option, select{
+.form-group option, select, input{
   background-color: rgb(82, 79, 79);
   color: white;
 }

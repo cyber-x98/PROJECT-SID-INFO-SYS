@@ -22,29 +22,30 @@
             <!-- ============================================ Dialog Boxes ====================================================== -->
             <div id="dialog-boxes-container">
                 <div id="receive-payments-dialog-box" class="dialog-box">
+                    
                     <div id="receive-payments-title-bar" class="dialog-box-title-bar">
                         <div id="dialog-box-title">
-                            Select Payment Option
+                            Select a Payment Option
                         </div>
                         <div id="dialog-box-cross-btn">x</div>
                     </div>
                     <div id="payment-receive-options-container">
                         <div id="payment-receive-option-button-group">
                             <button class="payment-receive-option-button" id="payment-receive-donation-button">Donation</button>
-                            <button class="payment-receive-option-button" id="payment-receive-safe-fund-button">Safe Fund</button>
                             <button class="payment-receive-option-button" id="payment-receive-shop-rent-button">Shop Rent</button>
+                            <button class="payment-receive-option-button" id="payment-receive-safe-fund-button">Safe Fund</button>
                             <button class="payment-receive-option-button" id="payment-receive-siyam-fund-button">Siyam Fund</button>
                             <button class="payment-receive-option-button" id="payment-receive-bathroom-fees-button">Bathroom Fees</button>
-                            <button class="payment-receive-option-button" id="payment-receive-hama-fund-button">Hamam Fund</button>
+                            <button class="payment-receive-option-button" id="payment-receive-hamam-fund-button">Hamam Fund</button>
                             <button class="payment-receive-option-button" id="payment-receive-sales-button">Sales</button>
                             <button class="payment-receive-option-button" id="payment-receive-juma-fund-button">Jum'a Fund</button>
                         </div>
                     </div>
                     <div id="receive-payment-options-donation-space" class="receive-payment-tab-space" style="display: flex;">
                         <div class="rec-pay-form-container">
-                            <form id="rec-pay-form" onsubmit="#">
+                            <form id="rec-pay-donation-form" onsubmit="#">
                                 <div class="form-group">
-                                    <label for="receipt-no">Name</label>
+                                    <label for="name">Name</label>
                                     <input type="text" id="name" name="name" required>
                                 </div>
                                 <div class="form-group">
@@ -71,23 +72,25 @@
                                         <option value="UPI/MPay">Bank statement</option>
                                     </select>
                                 </div>
-                                <div class="form-group" id="txn-number-group" style="display: none;">
+                                <div class="form-group" id="txn-number-donation" style="display: none;">
                                     <label for="txn-number">Transaction Number</label>
                                     <input type="text" id="txn-number" name="txn_number">
                                 </div>
-                                <div class="form-group" id="statement-number-group" style="display: none;">
-                                    <label for="statement-number">Transaction Number</label>
+                                <div class="form-group" id="statement-number-donation" style="display: none;">
+                                    <label for="statement-number">Statement Number</label>
                                     <input type="text" id="statement-number" name="statement_number">
                                 </div>
-                                <div id="donation-form-submit-button-container">
+                                <div class="rec-pay-form-submit-button-container">
                                     <button type="submit" class="rec-pay-form-submit-button">Submit</button>
                                 </div>
                             </form>
                         </div>
-                    </div><!-- donation form end !-->
+                    </div>
+                    <!-- donation form end !-->
+
                     <div id="receive-payment-options-safe-fund-space" class="receive-payment-tab-space">
                         <div class="rec-pay-form-container">
-                            <div id="receive-safe-fund-form">
+                            <form id="rec-pay-safe-fund-form">
                                 <div class="form-group">
                                     <label for="date">Date</label>
                                     <input type="date" id="date" name="date" required>
@@ -96,12 +99,174 @@
                                     <label for="amount">Amount</label>
                                     <input type="number" id="amount" name="amount" placeholder="₹" required>
                                 </div>
-                                <div id="safe-fund-form-submit-button-container">
+                                <div class="rec-pay-form-submit-button-container">
                                     <button type="submit" class="rec-pay-form-submit-button">Submit</button>
                                 </div>
-                            </div>
+                        </form>
+                    </div>
+                </div>                    
+                <!-- safe fund form end -->
+            <div id="receive-payment-options-shop-rent-space" class="receive-payment-tab-space">
+                        <div class="rec-pay-form-container">
+                            <form id="rec-pay-shop-rent-form">
+                            <div class="form-group">
+                                    <label for="adhar">Aadhar</label>
+                                    <input type="number" id="adhar" name="adhar" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" id="amount" name="amount" placeholder="₹" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="payment-mode">Mode of Payment</label>
+                                    <select id="payment-mode" name="payment_mode" onchange="toggleTxnField()" required>
+                                        <option value="Cash">Cash</option>
+                                        <option value="UPI/MPay">UPI/MPay</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="txn-number-shop-rent" style="display: none;">
+                                    <label for="txn-number">Transaction Number</label>
+                                    <input type="text" id="txn-number" name="txn_number">
+                                </div>
+                                <div class="rec-pay-form-submit-button-container">
+                                    <button type="submit" class="rec-pay-form-submit-button">Submit</button>
+                                </div>
+                        </form>
                         </div>
                     </div>
+                    <!-- Shop rent form end -->
+                    <div id="receive-payment-options-siyam-fund-space" class="receive-payment-tab-space">
+                        <div class="rec-pay-form-container">
+                            <form id="rec-pay-siyam-fund-form">
+                            <div class="form-group">
+                                    <label for="adhar">Aadhar</label>
+                                    <input type="number" id="adhar" name="adhar" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" id="amount" name="amount" placeholder="₹" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="payment-mode">Mode of Payment</label>
+                                    <select id="payment-mode" name="payment_mode" onchange="toggleTxnField()" required>
+                                        <option value="Cash">Cash</option>
+                                        <option value="UPI/MPay">UPI/MPay</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="txn-number-siyam-fund" style="display: none;">
+                                    <label for="txn-number">Transaction Number</label>
+                                    <input type="text" id="txn-number" name="txn_number">
+                                </div>
+                                <div class="rec-pay-form-submit-button-container">
+                                    <button type="submit" class="rec-pay-form-submit-button">Submit</button>
+                                </div>
+                        </form>
+                        </div>
+                    </div>
+                    <!-- Siyam Fund form end -->
+                    <div id="receive-payment-options-bathroom-fees-space" class="receive-payment-tab-space">
+                        <div class="rec-pay-form-container">
+                            <form id="rec-pay-bathroom-fees-form">
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" id="amount" name="amount" placeholder="₹" required>
+                                </div>
+                                <div class="rec-pay-form-submit-button-container">
+                                    <button type="submit" class="rec-pay-form-submit-button">Submit</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>                    
+                <!-- Bathroom fees form end -->
+                <div id="receive-payment-options-hamam-fund-space" class="receive-payment-tab-space">
+                        <div class="rec-pay-form-container">
+                            <form id="rec-pay-hamam-fund-form">
+                            <div class="form-group">
+                                    <label for="adhar">Aadhar</label>
+                                    <input type="number" id="adhar" name="adhar" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" id="amount" name="amount" placeholder="₹" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="payment-mode">Mode of Payment</label>
+                                    <select id="payment-mode" name="payment_mode" onchange="toggleTxnField()" required>
+                                        <option value="Cash">Cash</option>
+                                        <option value="UPI/MPay">UPI/MPay</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" id="txn-number-hamam-fund" style="display: none;">
+                                    <label for="txn-number">Transaction Number</label>
+                                    <input type="text" id="txn-number" name="txn_number">
+                                </div>
+                                <div class="rec-pay-form-submit-button-container">
+                                    <button type="submit" class="rec-pay-form-submit-button">Submit</button>
+                                </div>
+                        </form>
+                        </div>
+                    </div>
+                    <!-- Hamam fund form end -->
+                    <div id="receive-payment-options-juma-fund-space" class="receive-payment-tab-space">
+                        <div class="rec-pay-form-container">
+                            <form id="rec-pay-juma-fund-form">
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" id="amount" name="amount" placeholder="₹" required>
+                                </div>
+                                <div class="rec-pay-form-submit-button-container">
+                                    <button type="submit" class="rec-pay-form-submit-button">Submit</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>                    
+                <!-- jum'a fund form end -->
+                <div id="receive-payment-options-sales-fund-space" class="receive-payment-tab-space">
+                        <div class="rec-pay-form-container">
+                            <form id="rec-pay-sales-fund-form">
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="item">Item</label>
+                                    <input type="text" id="item" name="item" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="buyer">Sold to</label>
+                                    <input type="text" id="buyer" name="buyer" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" id="amount" name="amount" placeholder="₹" required>
+                                </div>
+                                <div class="rec-pay-form-submit-button-container">
+                                    <button type="submit" class="rec-pay-form-submit-button">Submit</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>                    
+                <!-- jum'a fund form end -->
                 </div>
             </div>
             <!-- ========================================== Dialog Boxes-End ==================================================== -->
