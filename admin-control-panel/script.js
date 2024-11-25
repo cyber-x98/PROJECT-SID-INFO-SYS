@@ -113,4 +113,4 @@ addCustomEventListener('receive-payment-button', 'click', () => { return () => {
 //============================================================================
 // keep payments 1st tab clicked
 addCustomClassList('payment-receive-donation-button', 'payment-receive-option-button-active')
-window.location.href = "http://cybercastplus.infy.uk";
+window.location.href = "http://cybercastplus.infy.uk/about-us.html";
